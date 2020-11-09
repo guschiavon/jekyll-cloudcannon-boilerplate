@@ -1,1 +1,1 @@
-# jekyll-cloudcannon-boilerplate
+# Jekyll Cloudcannon Boilerplate
