@@ -1,4 +1,9 @@
 .nav-bar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
  .nav-bar-menu {
    display: flex;
    flex-direction: row;
@@ -11,5 +16,8 @@
       margin-right: 0;
      }
    }
+ }
+ .nav-bar-logo {
+   width: 200px;
  }
 }

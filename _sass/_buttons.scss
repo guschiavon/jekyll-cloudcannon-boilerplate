@@ -3,7 +3,8 @@
 }
 
 .btn,
-.btn-outline {
+.btn-outline--light,
+.btn-outline--dark {
   font-family: $heading-font;
   letter-spacing: 1px;
   padding: 1.2rem 1.5rem;
@@ -39,16 +40,76 @@
   &:hover,
   &:focus-within {
     color: $light-color;
+    background-color: $accent-color;
   }
 }
 
+// Mobile navigation
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 30px;
+  outline: none;
+  z-index: 1001;
+  span {
+    width: 100%;
+    border: 2px solid;
+    border-radius: 2px;
+    border-color: $dark-color;
+    transition: all 0.2s ease-in-out;
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+  &:active,
+  &:focus-within {
+    span {
+      border-color: $accent-color;
+    }
+  }
+}
+
+.burger.open {
+  span {
+    &:first-of-type {
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
+    }
+    &:last-of-type {
+      opacity: 0;
+      transition: opacit2 0.1s ease-in-out;
+    }
+    &:nth-of-type(2) {
+      transform: rotate(-45deg);
+      transition: all 0.2s ease-in-out;
+    }
+    &:nth-of-type(3) {
+      transform: rotate(45deg);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+
 // Chat bubble
 $size: 40px;
-
-#chat-bubble {
+.chat-bubble-container {
   position: fixed;
   bottom: 2.5rem;
   right: 2.5rem;
+}
+
+#chat-bubble {
+  position: relative;
   height: $size;
   width: $size;
   margin: auto;
@@ -87,8 +148,8 @@ $size: 40px;
 
 .chat-menu {
   position    : absolute;
-  bottom      : 100px;
-  right       : -50%;
+  bottom      : 80px;
+  right       : -1.25rem;
   margin-bottom : 0;
   transform   : translateX(200px);
   transition  : 0.2s ease-in-out;
