@@ -1,4 +1,5 @@
-// Burger menu 
+// Navigation
+// Burger Menu
 const burger = document.getElementById('burger')
 const navMenu = document.querySelector('.nav-bar-menu')
 burger.addEventListener('click', function (){
@@ -14,3 +15,4 @@ chatBubble.addEventListener('click', function () {
   this.classList.toggle('active');
   chatMenu.classList.toggle('open');
 });
+

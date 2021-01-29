@@ -38,20 +38,44 @@
   <a href="/" class="nav-bar-logo" aria-label="Homepage">
     <img src="/assets/images/logo.png" alt="Jekyll CloudCannon Boilerplate" class="responsive-img">
   </a>
-  <ul class="nav-bar-menu">
-    <li class="nav-bar-menu--item mx-2">
-      <a href="#">Menu</a>
-    </li>
-    <li class="nav-bar-menu--item mx-2">
-      <a href="#">Menu</a>
-    </li>
-    <li class="nav-bar-menu--item mx-2">
-      <a href="#">Menu</a>
-    </li>
-    <li class="nav-bar-menu--item mx-2">
-      <a href="#">Menu</a>
-    </li>
-  </ul>
+  <div class="nav-bar-menu">
+    <!-- Menu items are rendered from the `settings.yml` file located in the `_data` folder -->
+    
+    
+    <a href="#" class="nav-bar-menu--item">Menu</a>
+    
+    
+    
+    <button class="nav-bar-menu--item dropdown">
+      Dropdown
+      <div class="dropdown-menu">
+      
+        <a href="#" class="dropdown-menu--item">Submenu</a>
+      
+        <a href="#" class="dropdown-menu--item">Submenu</a>
+      
+        <a href="#" class="dropdown-menu--item">Submenu</a>
+      
+      </div>
+    </button>
+    
+    
+    
+    <button class="nav-bar-menu--item dropdown">
+      Dropdown
+      <div class="dropdown-menu">
+      
+        <a href="#" class="dropdown-menu--item">Submenu</a>
+      
+        <a href="#" class="dropdown-menu--item">Submenu</a>
+      
+        <a href="#" class="dropdown-menu--item">Submenu</a>
+      
+      </div>
+    </button>
+    
+    
+  </div>
   <button id="burger" class="burger">
     <span></span>
     <span></span>
