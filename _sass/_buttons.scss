@@ -140,6 +140,9 @@ $size: 40px;
   svg {
     fill    : whitesmoke;
   }
+  .chat-menu-item--icon svg {
+    fill: $accent-color;
+  }
 }
 #chat-bubble.active::before {
   background    : rgb(3,158,173);

@@ -31,12 +31,14 @@
   </svg>
     <ul class="chat-menu">
       Chat Now
+      {% for item in site.data.settings.general.social %}
+      {% if item.add_to_chat_bubble %}
+      {% assign icon = item.channel %}
       <li class="chat-menu-item">
-        <a href="#" rel="noreferrer noopener" target="_blank"><img src="/assets/graphics/whatsapp.svg" alt="whatsapp" class="chat-menu-item--icon"></a>
+        <a href="{{item.url}}" rel="noreferrer noopener" target="_blank" aria-label="click to chat on {{item.channel}}"><div class="chat-menu-item--icon">{% include social-icons.html icon=icon %}</div></a>
       </li>
-      <li class="chat-menu-item">
-        <a href="#" rel="noreferrer noopener" target="_blank"><img src="/assets/graphics/messenger.svg" alt="whatsapp" class="chat-menu-item--icon"></a>
-      </li>
+      {% endif %}
+      {% endfor %}
     </ul>
   </button>
 </div>

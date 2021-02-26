@@ -1,10 +1,17 @@
 general:
-  site_url:
+  site_url: 
   address:
   email:
   phone:
   social:
     - channel: "Facebook"
+      add_to_chat_bubble: false
+      url: 'https://facebook.com'
+    - channel: "WhatsApp"
+      add_to_chat_bubble: true
+      url: 'https://facebook.com'
+    - channel: "Messenger"
+      add_to_chat_bubble: true
       url: 'https://facebook.com'
 branding:
   site_title: Jekyll CloudCannon Boilerplate
@@ -25,12 +32,14 @@ navigation:
     - name: About
       url: /about
       is_dropdown: false
+      style_as_button: false
       submenus:
         - name:
           url:
     - name: Dropdown
       url: '#'
       is_dropdown: true
+      style_as_button: false
       submenus:
         - name: Item 1
           url: /
@@ -41,6 +50,7 @@ navigation:
     - name: More
       url: '#'
       is_dropdown: true
+      style_as_button: false
       submenus:
         - name: Item 1
           url: /

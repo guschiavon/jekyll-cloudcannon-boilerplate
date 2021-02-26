@@ -136,6 +136,8 @@ h1 { font-size: calc(1.1rem * 2.5); }
 
 #chat-bubble.active svg { fill: whitesmoke; }
 
+#chat-bubble.active .chat-menu-item--icon svg { fill: #415a3d; }
+
 #chat-bubble.active::before { background: #039ead; background: linear-gradient(159deg, #039ead 0%, #094c79 35%, #ff00b7 100%); }
 
 .chat-menu { position: absolute; bottom: 80px; right: -1.25rem; margin-bottom: 0; transform: translateX(200px); transition: 0.2s ease-in-out; text-transform: uppercase; font-size: 1rem; color: #415a3d; background-color: whitesmoke; border-radius: 20px; padding: 15px; }

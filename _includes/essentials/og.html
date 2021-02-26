@@ -23,4 +23,4 @@
 <meta name="keywords" content="{% if page.keywords %} {{page.keywords}} {% else %} {% for keyword in site.data.settings.seo.keywords %} {{ keyword }} {% endfor %} {% endif %}">
 <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }} {% else %} {{ site.data.settings.seo.site_description_text | truncate: 160  }} {% endif %}" />
 
-<link rel="canonical" href="{{site.data.settings.general.site_url}}">
+<link rel="canonical" href="{{site.data.settings.general.site_url}}{{page.url}}">
