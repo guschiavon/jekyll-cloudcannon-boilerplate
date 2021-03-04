@@ -11,6 +11,16 @@ comments:
  heading_font_family: Add the font code block on the configuratios menu
  preview_image: Image to be shown when sharing the site on social networks
 
+plugins:
+  - jekyll-sitemap
+  - jekyll-webp
+
+webp:
+  enabled: true
+  nested: true
+  img_dir: ["/assets/images"]
+  regenerate: false
+  
 channels:
   - "Facebook"
   - "Instagram"

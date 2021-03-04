@@ -30,6 +30,10 @@ _It is important to note that the padding is followed by an `!important` stateme
   - `mt-1` would apply `1rem` to `margin-top`
   - Values go from 1 to 4, but this can be expanded as needed.
 
+### Responsive Images
+
+We can have images that fit the container that they are inserted on by using the `responsive-img` class on the `img` tag. This adds the `object-fit` and `object-position` properties to the image: define the width and height of the image container and voilà!
+
 ## Using the `settings.yml` file
 
 The `settings.yml` file (a.k.a. **data** file)allows users to intuitively change fonts, colors and other variables using the CloudCannon interface. It also provides the ability to inject additional scripts into `<head>` and `<body>` if wanted.
@@ -57,3 +61,23 @@ Another example:
 {% endfor %}
 ```
 
+## Cookie Banner (GDPR)
+
+You must include the `cookie-banner.html` file and the `cookie-prefs.html` on the base layout and enable the `cookie-settings-v2.js` script for it to work.
+
+The cookie script is GDPR-EU-compliant and stores preferences on the client-side `sessionStorage`. When the page is refreshed or changed, the cookie banner will re-render as per GDPR-EU requirements. You can tweak the JS file to remember preferences when refreshing, to hide the cookie banner but do it at your own discretion. `sessionStorage` is cleared when the tab is closed.
+
+## The WebP plugin
+
+The `jekyll-webp` plugin generates a `.webp` version of images inside the `/assets/images` folder. The plugin can be configured on the `_config.yml` file.
+
+Simply add the `<img>` tag and add the `srcset` attribute to it, referencing the image's path but with the `.webp` extension.
+
+Examples: 
+```
+<!-- default img tag -->
+<img src="/assets/images/image.jpg" srcset="/assets/images/image.webp">
+
+<!-- using Liquid -->
+<img src="{{page.image}}" srcset="{{page.image | replace: "jpg", "webp"}}">
+```
